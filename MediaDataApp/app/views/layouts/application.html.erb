@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+
+<html ng-app="entry">
 <head>
-  <title>MediaDataApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <title>MediaDataApp</title>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+   <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+  
 </head>
-<body>
-
+<body ng-controller ="EntryController as user">
+  {{user.data.name}}
 <%= yield %>
-
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
