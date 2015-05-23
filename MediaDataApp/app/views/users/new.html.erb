@@ -1,0 +1,41 @@
+<h1>Nuevo Usuario</h1>
+
+<%= form_for @user do |usuario| %>
+	<div>
+		<%= usuario.label :user%><br>
+		<%= usuario.text_field :user %>
+	</div>
+	<div>
+		<%= usuario.label :password%><br>
+		<%= usuario.password_field :password %>
+	</div>
+	<div>
+		<%= usuario.label :admin%><br>
+		<%= usuario.check_box :admin %>
+	</div>
+	<div>
+		<%= usuario.label :name%><br>
+		<%= usuario.text_field :name %>
+	</div>
+	<div>
+		<%= usuario.label :age%><br>
+		<%= usuario.number_field :age %>
+	</div>
+	<div>
+		<%= usuario.label :profession%><br>
+		<%= usuario.text_field :profession %>
+	</div>
+	<div>
+		<%= usuario.label :country%><br>
+		<%= usuario.text_field :country %>
+	</div>
+	<div>
+		<%= usuario.label :mail%><br>
+		<%= usuario.text_field :mail %>
+	</div>
+	<div>
+		<%= usuario.label :picture%><br>
+		<%= usuario.text_field :picture %>
+	</div>
+	<div class="button"> <%= usuario.submit %></div>
+<% end %>
