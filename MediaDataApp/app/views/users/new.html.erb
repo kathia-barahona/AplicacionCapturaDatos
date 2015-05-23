@@ -1,41 +1,71 @@
-<h1>Nuevo Usuario</h1>
+<html>
+<head>
+	<title></title>
+</head>
 
-<%= form_for @user do |usuario| %>
-	<div>
-		<%= usuario.label :user%><br>
-		<%= usuario.text_field :user %>
-	</div>
-	<div>
-		<%= usuario.label :password%><br>
-		<%= usuario.password_field :password %>
-	</div>
-	<div>
-		<%= usuario.label :admin%><br>
-		<%= usuario.check_box :admin %>
-	</div>
-	<div>
-		<%= usuario.label :name%><br>
-		<%= usuario.text_field :name %>
-	</div>
-	<div>
-		<%= usuario.label :age%><br>
-		<%= usuario.number_field :age %>
-	</div>
-	<div>
-		<%= usuario.label :profession%><br>
-		<%= usuario.text_field :profession %>
-	</div>
-	<div>
-		<%= usuario.label :country%><br>
-		<%= usuario.text_field :country %>
-	</div>
-	<div>
-		<%= usuario.label :mail%><br>
-		<%= usuario.text_field :mail %>
-	</div>
-	<div>
-		<%= usuario.label :picture%><br>
-		<%= usuario.text_field :picture %>
-	</div>
-	<div class="button"> <%= usuario.submit %></div>
-<% end %>
+<body>
+	<h1>Nuevo Usuario</h1>
+
+	<section ng-conroller="RegistryController as registry">
+		<div class="signin" ng-hide="registry.isAllowed()">
+			<label>Username or Email:</label><input type="text" name="user">
+			<br><label>Password</label><input type="password" name="password">
+			<a href ng-click="registry.active(1)">Registry</a>
+		</div>
+
+		<div class="form" ng-show="registry.isAllowed()">
+			<%= form_for @user do |usuario| %>
+
+			<div>
+				<%= usuario.label :user%><br>
+				<%= usuario.text_field :user %>
+			</div>
+
+			<div>
+				<%= usuario.label :password%><br>
+				<%= usuario.password_field :password %>
+			</div>
+
+			<div>
+				<%= usuario.label :admin%><br>
+				<%= usuario.check_box :admin %>
+			</div>
+
+			<div>
+				<%= usuario.label :name%><br>
+				<%= usuario.text_field :name %>
+			</div>
+
+			<div>
+				<%= usuario.label :age%><br>
+				<%= usuario.number_field :age %>
+			</div>
+
+			<div>
+				<%= usuario.label :profession%><br>
+				<%= usuario.text_field :profession %>
+			</div>
+
+			<div>
+				<%= usuario.label :country%><br>
+				<%= usuario.text_field :country %>
+			</div>
+
+			<div>
+				<%= usuario.label :mail%><br>
+				<%= usuario.text_field :mail %>
+			</div>
+
+			<div>
+				<%= usuario.label :picture%><br>
+				<%= usuario.text_field :picture %>
+			</div>
+
+			<div class="button">
+				<%= usuario.submit %>
+			</div><% end %>
+		</div>
+	</section>
+</body>
+</html>
+
