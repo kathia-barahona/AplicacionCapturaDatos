@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20150523200426) do
     t.integer  "age",                    limit: 4
     t.string   "profession",             limit: 255
     t.string   "country",                limit: 255
-    t.string   "mail",                   limit: 255
     t.string   "picture",                limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"

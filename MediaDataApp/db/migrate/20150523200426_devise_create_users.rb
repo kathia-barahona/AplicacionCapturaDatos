@@ -35,7 +35,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.integer :age
       t.string :profession
       t.string :country
-      t.string :mail
       t.string :picture
 
       t.timestamps
