@@ -30,7 +30,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
-      t.boolean :admin
+      t.boolean :admin 
       t.string :name
       t.integer :age
       t.string :profession
@@ -38,6 +38,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :picture
 
       t.timestamps
+
+      
     end
 
     add_index :users, :email,                unique: true
