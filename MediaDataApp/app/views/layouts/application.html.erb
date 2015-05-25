@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='mediadata'>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MediaDataApp</title>
+  <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"%>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+<div class="container-narrow">
+  <div class="masthead">
+    <%= render 'layouts/user_header' %>
+    <h3 class="muted"><%= link_to "MediaData", root_path %></h3>
+    <h5 class="muted">The best friend for your Media!</h5>
+  </div>
+  <hr />
+  <%= yield %>
+</div>
 
 </body>
 </html>
