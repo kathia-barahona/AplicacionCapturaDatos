@@ -1,42 +1,51 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-h2{
-	font-size: 50px;
-	font-family: Montserrat,Verdana , Geneva, Tahoma, Arial, Helvetica, serif;
+@import "bootstrap.min.css";
+.border-form-div {
+  max-width: 300px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
 }
-.container{
-	margin:auto;
-    width: 75%;
-    height: 50%;
-    background-color: #DCD3C3;
-    padding-left: 0;
-    padding-right: 0;
+.border-form-div .form-signin-heading,
+.border-form-div .checkbox {
+  margin-bottom: 10px;
 }
-body{
-	background-color: #FFFDF9;
+.botones{
+	position: relative;
+	left: 484px;
 }
-ul{
-	height: 50px;
-	margin: 0;
-	padding: 0;
-	background-color: #6A9D91;
+.jumbotron{
+	text-align: center;
+	background-color: #689E91;
+	color: #fff;
 }
-ul li {
-	height: 50px;
-	margin: 0;
-	padding: 0;
-	background-color: #6A9D91;
+.border-form-div input[type="text"],
+.border-form-div input[type="email"],
+.border-form-div input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
 }
-a {
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-	color: white;
-	font-family: Montserrat,Verdana , Geneva, Tahoma, Arial, Helvetica, sans-serif; 
+.span6{
+	margin: 20px;	
 }
-.field{
-	margin:5px;
-	font-family: Montserrat,Verdana , Geneva, Tahoma, Arial, Helvetica, sans-serif; 
-	font-size: 12px;
+a{
+	color: #30524C;
 }
-
+.btn{
+	height: 40px;
+	width: 150px;
+}
+.btn-success {
+  color: #fff;
+  background-color: #555555;
+  border-color:#555555;
+  margin: 20px;
+}

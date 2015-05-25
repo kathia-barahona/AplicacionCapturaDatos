@@ -9,20 +9,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container">
-		<ul class="nav nav-tabs">
-			<li>
-				<a href >Home</a>
-			</li>
-			<li>
-				<a href >About us</a>
-			</li>
-			<li>
-				<a href >Log In</a>
-			</li>
-		</ul>
-	
-		<%= yield %>
+<div class="container-narrow">
+  <div class="masthead">
+    <%= render 'layouts/user_header' %>
+    <h3 class="muted"><%= link_to "MediaData", root_path %></h3>
+    <h5 class="muted">The best friend for your Media!</h5>
+  </div>
+  <hr />
+  <%= yield %>
 </div>
+
 </body>
 </html>
