@@ -1,8 +1,14 @@
-<ul class="nav nav-pills pull-right">
+
   <% if user_signed_in? %>
-    <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+  	<ul class="nav nav-pills pull-right">
+   		<li><%= link_to "New Entry", new_registro_path %></li>
+   		<li><%= link_to "Profile", current_user %></li>
+      <li><%= link_to "Settings", edit_user_registration_path %></li>
+    	<li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+ 		 </ul>
   <% else %>
-    <li><%= link_to "Sign in", new_user_session_path %></li>
-    <li><%= link_to "Registry", new_user_registration_path %></li>
+  	<ul class="nav nav-pills pull-right">
+   		 <li><%= link_to "Sign in", new_user_session_path %></li>
+    	<li><%= link_to "Registry", new_user_registration_path %></li>
+ 	 </ul>
   <% end %>
-</ul>

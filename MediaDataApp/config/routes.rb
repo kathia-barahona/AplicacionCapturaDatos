@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :registros
   devise_for :users
+  resources :users
+  get 'users/show/:id' => 'user#show', :as => 'show_user_path'
   get 'static_pages/home'
  
   # The priority is based upon order of creation: first created -> highest priority.
