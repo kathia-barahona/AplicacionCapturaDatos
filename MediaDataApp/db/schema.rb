@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150527212130) do
+=======
+ActiveRecord::Schema.define(version: 20150531020203) do
+>>>>>>> 902f27922000856383cdd2375e53b4a50bd0cfcb
 
   create_table "registros", force: :cascade do |t|
     t.string   "type",       limit: 255
@@ -45,6 +49,10 @@ ActiveRecord::Schema.define(version: 20150527212130) do
     t.string   "picture",                limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture_file_name",      limit: 255
+    t.string   "picture_content_type",   limit: 255
+    t.integer  "picture_file_size",      limit: 4
+    t.datetime "picture_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
