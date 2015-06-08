@@ -34,7 +34,18 @@
   margin-bottom: 15px;
   padding: 7px 9px;
 }
-
+.img_preview{
+  height: 150px;
+  width:260px;
+ 
+}
+.navbar-default ul li a:hover {
+    color: black;
+   
+}
+.navbar-default ul li a {
+    color: #FFF;
+}
 .span6{
 	margin: 20px;	
 }
@@ -45,8 +56,19 @@ a{
 	height: 40px;
 	width: 150px;
 }
+.navbar-default {
+    background-color: #555;
+    border-color: #E7E7E7;
+    padding:0;
+}
 .btn-success {
   color: #fff;
+  background-color: #555555;
+  border-color:#555555;
+  margin: 20px;
+}
+.btn-primary{
+   color: #fff;
   background-color: #555555;
   border-color:#555555;
   margin: 20px;

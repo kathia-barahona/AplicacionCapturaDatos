@@ -1,10 +1,8 @@
 <div class="jumbotron">
   <% if user_signed_in? %>
-    <h1>Welcome back!</h1>
-    <p class="lead">
-         Bienvenido, ahora cierra sesion porque esto no hace nada todavia!! :c
-    </p>
-    <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => 'btn btn-large btn-danger' %>
+    <% if current_user.registros.count == 0 %>
+        <%= render 'new_registro ' %>
+    <%end%>
   <% else %>
     <h1>Welcome!</h1>
     <p class="lead">
