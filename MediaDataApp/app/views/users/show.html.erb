@@ -1,0 +1,20 @@
+<div class="border-form-div">
+
+<%= image_tag @user.picture_url(:thumb) %>
+
+ <h1><%= @user.name %></h1>
+ <%if @user.age !=nil %>
+ 	<label><%=:age%></label>
+ 	<h4><%= @user.age%></h4>
+ <%end%>
+ <%if @user.profession != nil%>
+  <label><%=:profession%></label>
+ <h4><%= @user.profession%></h4>
+ <%end%>
+ <%if @user.country != nil %>
+  <label><%=:country%></label>
+ <h4><%= @user.country%></h4>
+ <%end%>
+  <label><%=:email%></label>
+ <h4><%= @user.email%></h4>
+</div>

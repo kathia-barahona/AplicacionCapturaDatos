@@ -12,10 +12,14 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20150609065938) do
+=======
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150527212130) do
 =======
 ActiveRecord::Schema.define(version: 20150531020203) do
 >>>>>>> 902f27922000856383cdd2375e53b4a50bd0cfcb
+>>>>>>> origin/master
 
   create_table "registros", force: :cascade do |t|
     t.string   "type",       limit: 255
@@ -46,13 +50,16 @@ ActiveRecord::Schema.define(version: 20150531020203) do
     t.integer  "age",                    limit: 4
     t.string   "profession",             limit: 255
     t.string   "country",                limit: 255
-    t.string   "picture",                limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+<<<<<<< HEAD
+    t.string   "picture",                limit: 255
+=======
     t.string   "picture_file_name",      limit: 255
     t.string   "picture_content_type",   limit: 255
     t.integer  "picture_file_size",      limit: 4
     t.datetime "picture_updated_at"
+>>>>>>> origin/master
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
