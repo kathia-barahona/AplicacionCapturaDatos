@@ -1,3 +1,4 @@
+<div class="border-form-div">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -25,10 +26,6 @@
   <%= @registro.location %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @registro.user %>
-</p>
-
 <%= link_to 'Edit', edit_registro_path(@registro) %> |
 <%= link_to 'Back', registros_path %>
+</div>

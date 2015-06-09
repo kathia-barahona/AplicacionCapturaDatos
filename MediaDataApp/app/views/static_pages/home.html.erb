@@ -1,9 +1,15 @@
-<div class="jumbotron">
+
   <% if user_signed_in? %>
        <%if current_user.registros.count == 0 %>
-              <%= render 'registros/form' %>
+             <h1>New Entry</h1>
+              <%= render :partial =>'registros/form', :locals => {:@registro => Registro.new} %>
+        <%else%>
+           <script type="text/javascript">
+        window.location.href = "/registros"
+        </script>
        <%end%>
   <% else %>
+  <div class="jumbotron">
     <h1>Welcome!</h1>
     <p class="lead">
         Sign in to start making some new entries!!
@@ -14,5 +20,5 @@
      
         <%= link_to "Registry", new_user_registration_path, :class => "btn btn-success" %>
     </div>
+    </div>
   <% end %>
-</div>

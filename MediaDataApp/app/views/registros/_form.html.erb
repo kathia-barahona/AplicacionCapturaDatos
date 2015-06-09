@@ -1,9 +1,8 @@
 <div class="border-form-div">
-
-<%= form_for(@registro) do |f| %>
+<%= form_for @registro do |f| %>
   <% if @registro.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@registro.errors.count, "error") %> prohibited this registro from being saved:</h2>
+      <h2><%= pluralize(registro.errors.count, "error") %> prohibited this registro from being saved:</h2>
 
       <ul>
       <% @registro.errors.full_messages.each do |message| %>
@@ -15,7 +14,7 @@
 
   <div class="field">
     <%= f.label :type %><br>
-    <%= f.select :type, ["Internet","Television","Radio", "Cine","Prensa"] %>
+    <%= f.select :type, ["Internet","Television","Radio", "Cine","Prensa"] ,:class =>"form-control"%>
   </div>
   <div class="field">
     <%= f.label :channel %><br>
@@ -31,13 +30,13 @@
   </div>
   <div class="field">
     <%= f.label :location %><br>
-    <%= f.select :location, ["Casa", "Trabajo", "Otro sitio"] %>
+    <%= f.select :location, ["Casa", "Trabajo", "Otro sitio"] ,:class =>"form-control" %>
   </div>
   <div class="field">
     <%= f.hidden_field :user_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create",:class =>'btn btn-primary' %>
   </div>
 <% end %>
 </div>

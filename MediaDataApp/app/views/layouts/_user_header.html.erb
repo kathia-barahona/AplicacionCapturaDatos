@@ -7,7 +7,7 @@
   <% if user_signed_in? %>
       <ul class="nav nav-pills pull-right">
       <li><%= link_to "New Entry", new_registro_path %></li>
-      <% if current_user.admin==false  %>
+      <% if current_user.admin==true %>
         <li><%= link_to "Users", users_index_path%></li>
       <% end %>
       <li><%= link_to "Profile", current_user %></li>
