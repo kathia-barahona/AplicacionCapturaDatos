@@ -1,3 +1,5 @@
+<div class="border-form-div">
+
 <%= form_for(@registro) do |f| %>
   <% if @registro.errors.any? %>
     <div id="error_explanation">
@@ -38,3 +40,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
