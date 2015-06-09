@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 <div class="border-form-div">
 <%= form_for @registro do |f| %>
   <% if @registro.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(registro.errors.count, "error") %> prohibited this registro from being saved:</h2>
+=======
+<%= form_for(@registro) do |f| %>
+  <% if @registro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@registro.errors.count, "error") %> prohibited this registro from being saved:</h2>
+>>>>>>> origin/master
 
       <ul>
       <% @registro.errors.full_messages.each do |message| %>
@@ -14,7 +21,11 @@
 
   <div class="field">
     <%= f.label :type %><br>
+<<<<<<< HEAD
     <%= f.select :type, ["Internet","Television","Radio", "Cine","Prensa"] ,:class =>"form-control"%>
+=======
+    <%= f.select :type, ["Internet","Television","Radio", "Cine","Prensa"] %>
+>>>>>>> origin/master
   </div>
   <div class="field">
     <%= f.label :channel %><br>
@@ -30,13 +41,23 @@
   </div>
   <div class="field">
     <%= f.label :location %><br>
+<<<<<<< HEAD
     <%= f.select :location, ["Casa", "Trabajo", "Otro sitio"] ,:class =>"form-control" %>
+=======
+    <%= f.select :location, ["Casa", "Trabajo", "Otro sitio"] %>
+>>>>>>> origin/master
   </div>
   <div class="field">
     <%= f.hidden_field :user_id %>
   </div>
   <div class="actions">
+<<<<<<< HEAD
     <%= f.submit "Create",:class =>'btn btn-primary' %>
   </div>
 <% end %>
 </div>
+=======
+    <%= f.submit %>
+  </div>
+<% end %>
+>>>>>>> origin/master
