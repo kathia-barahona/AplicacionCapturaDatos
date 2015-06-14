@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
   get 'users/index'
-
-=======
->>>>>>> origin/master
   resources :registros
   devise_for :users
   resources :users
