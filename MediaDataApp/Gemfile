@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
-<<<<<<< HEAD
-=======
+
 gem 'jcrop-rails-v2'
->>>>>>> origin/master
 gem "paperclip", "~> 4.2"
 gem 'tzinfo-data'
 gem 'carrierwave'
