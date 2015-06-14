@@ -27,6 +27,15 @@
          Users
         <% end %>
       <% end %>
+
+      <% if current_user.admin==true %>
+        <li>
+        <%= link_to registros_export_path(format: "csv") do %> 
+        <span class="icon-users"></span>
+         Exportar 
+        <% end %>
+      <% end %>
+
       <li>
         <%= link_to current_user do %> 
         <span class="icon-profile"></span>

@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150609065938) do
+ActiveRecord::Schema.define(version: 20150614173348) do
 
   create_table "registros", force: :cascade do |t|
-    t.string   "type",       limit: 255
+    t.string   "media",      limit: 255
     t.string   "channel",    limit: 255
     t.time     "h_inicio"
     t.time     "h_final"
@@ -42,9 +42,9 @@ ActiveRecord::Schema.define(version: 20150609065938) do
     t.integer  "age",                    limit: 4
     t.string   "profession",             limit: 255
     t.string   "country",                limit: 255
+    t.string   "picture",                limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "picture",                limit: 255
     t.string   "picture_file_name",      limit: 255
     t.string   "picture_content_type",   limit: 255
     t.integer  "picture_file_size",      limit: 4
