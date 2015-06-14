@@ -13,4 +13,6 @@ class UsersController < ApplicationController
  		 params.require(:user).permit(:picture)
 	end
 
+
+
 end
