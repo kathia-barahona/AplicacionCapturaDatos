@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users
   get 'users/show/:id' => 'user#show', :as => 'show_user_path'
   get 'static_pages/home'
+  get 'export', to: 'registros#export', as: :registros_export
  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

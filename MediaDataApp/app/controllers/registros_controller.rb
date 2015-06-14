@@ -7,6 +7,14 @@ class RegistrosController < ApplicationController
     @registros = current_user.registros.all
   end
 
+  def export
+    @data = Registro.order(:created_at)
+    respond_to do |format|
+     format.html { redirect_to root_url }
+     format.csv { send_data @data.to_csv }
+    end
+  end
+
   # GET /registros/1
   # GET /registros/1.json
   def show
@@ -69,6 +77,6 @@ class RegistrosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def registro_params
-      params.require(:registro).permit(:type, :channel, :h_inicio, :h_final, :location, :user_id)
+      params.require(:registro).permit(:media, :channel, :h_inicio, :h_final, :location, :user_id)
     end
 end
