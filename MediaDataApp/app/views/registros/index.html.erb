@@ -6,5 +6,6 @@
        <label>Initial Hour: </label><%=registro.h_inicio%><br>
        <label>Final Hour: </label><%=registro.h_final%><br>
        <label>Location: </label><%=registro.location%><br>
+       <%= link_to 'Edit', edit_registro_path(registro) %> |
      </div>
 <% end %>
