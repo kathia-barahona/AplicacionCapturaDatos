@@ -45,6 +45,7 @@ section{
    	height: 100%;
    	margin: 0;
    	position: fixed;
+      top:15%;
    }
    header nav ul li{
    	display: block;
@@ -53,6 +54,7 @@ section{
    }
    .menu_bar {
    	display: block;
+      position: fixed;
    	width: 100%;
    	background: #ccc;
    }
