@@ -1,0 +1,26 @@
+<div class="border-form-div">
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+      <%= f.check_box :admin, :id=>'cb_admin', :style=>'visibility: hidden'%>      
+  </div>
+  <div id='pregunta'>
+  </div>
+
+  <div class="actions">
+    <%= f.submit :value=>"Admin",:class =>'btn btn-primary',:id=>'link_admin' %>
+  </div>
+<% end %>
+</div>
+ 

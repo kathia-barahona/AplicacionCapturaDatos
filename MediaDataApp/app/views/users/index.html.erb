@@ -12,12 +12,17 @@
   </thead>
 
   <tbody>
-  	<%@users = User.all%>
+  	
     <% @users.each do |user| %>
       <tr>
         <td><%= user.id %></td>
         <td><%= user.name %></td>
         <td><%= link_to 'Show', user %></td>
+        <% if  user.admin == true %>
+          <td><%= link_to 'Remove Admin', edit_user_path(user),:class=>'link_admin' %></td>
+        <%else %>
+          <td><%= link_to 'Make Admin', edit_user_path(user), :class=>'link_admin'%></td>
+        <% end %>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

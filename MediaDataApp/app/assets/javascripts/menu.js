@@ -22,3 +22,22 @@ $('.menu_bar').click(function(){
 });
 
 };
+
+$(document).ready(changeadmin);
+function changeadmin(){
+	$('#link_admin').click(function(){
+           $('#cb_admin').trigger('click');
+	});
+}
+
+$(document).ready(cambiarpregunta);
+function cambiarpregunta(){
+	if($('#cb_admin').is(':checked')){
+		$('#pregunta').text("This user will stop being admin. Are you sure?");
+		$('#link_admin').attr('value',"Remove Admin");
+	}else{
+		$('#pregunta').text("This user will become admin. Are you sure?");
+		$('#link_admin').attr('value',"Make Admin");
+	}
+}
+

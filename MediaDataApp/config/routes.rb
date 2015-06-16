@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'users/index'
   resources :registros
-  devise_for :users, :path_prefix => 'd'
+  devise_for :users
   resources :users
   get 'users/show/:id' => 'user#show', :as => 'show_user_path'
   get 'static_pages/home'

@@ -15,7 +15,7 @@
 
   <div class="field">
     <%= f.label :media %><br>
-    <%= f.select :media, ["Internet","Television","Radio", "Cine","Prensa"] ,:class =>"form-control"%>
+    <%= f.select :media, ["Internet","Television","Radio", "Movies","Newspaper"] ,:class =>"form-control"%>
   </div>
   <div class="field">
     <%= f.label :channel %><br>
@@ -31,7 +31,7 @@
   </div>
   <div class="field">
     <%= f.label :location %><br>
-    <%= f.select :location, ["Casa", "Trabajo", "Otro sitio"] ,:class =>"form-control" %>
+    <%= f.select :location, ["Home", "Work", "Other"] ,:class =>"form-control" %>
   </div>
   <div class="field">
     <%= f.hidden_field :user_id %>
