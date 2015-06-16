@@ -1,7 +1,7 @@
 
   <% if user_signed_in? %>
        <%if current_user.registros.count == 0 %>
-             <h1>New Entry</h1>
+             <h1 align="center">New Entry</h1>
               <%= render :partial =>'registros/form', :locals => {:@registro => Registro.new} %>
         <%else%>
            <script type="text/javascript">
