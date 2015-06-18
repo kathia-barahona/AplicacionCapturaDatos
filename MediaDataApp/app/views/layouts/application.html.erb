@@ -32,9 +32,9 @@
     }
 
     function checkCookie() {
-    var user = getCookie("webpage");
-    if (user != "") {
-        alert("Welcome again " + user);
+    var page = getCookie("webpage");
+    if (page != "") {
+
     } else {
         introJs().start();
         webpage = "http://localhost:3000/registros";
@@ -45,7 +45,7 @@
   }
   </script>
 </head>
-<body class="menu menu-open">
+<body class="menu menu-open" onload="checkCookie()">
 
 
 <div class="container-narrow">

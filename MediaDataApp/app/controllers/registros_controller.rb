@@ -57,6 +57,7 @@ class RegistrosController < ApplicationController
         format.json { render json: @registro.errors, status: :unprocessable_entity }
       end
     end
+    
   end
 
   # DELETE /registros/1
