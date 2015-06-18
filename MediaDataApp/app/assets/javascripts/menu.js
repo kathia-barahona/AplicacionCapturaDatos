@@ -1,7 +1,13 @@
 $(document).ready(main);
- 
+var tour = 0;
 var contador = 1;
- 
+/*if(tour === 0){
+	
+	tour = 1;
+}*/
+  $('nav').animate({
+		left: '-100%'
+  });
 function main(){
 $('.menu_bar').click(function(){
 // $('nav').toggle();
@@ -19,6 +25,9 @@ $('.menu_bar').click(function(){
 		});
 	}
  
+});
+
+
 });
 
 };

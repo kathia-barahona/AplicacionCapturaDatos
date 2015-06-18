@@ -35,6 +35,7 @@ header nav ul li span{
 }
 header nav ul li a:hover{
 	background: #037E8C;
+   color: white;
 }
 section{
 	padding: 20px;
