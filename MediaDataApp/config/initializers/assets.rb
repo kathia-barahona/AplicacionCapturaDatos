@@ -5,6 +5,9 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( fonts.css )
 Rails.application.config.assets.precompile += %w( estilos.css )
 Rails.application.config.assets.precompile += %w( menu.js )
+Rails.application.config.assets.precompile += %w( intro.js )
+Rails.application.config.assets.precompile += %w( introjs.css )
+
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

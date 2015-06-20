@@ -13,12 +13,13 @@
   <% end %>
 
   <div class="field">
-      <%= f.label :admin, 'Check/Uncheck to toggle admin' %><br>
-      <%= f.check_box :admin%>
+      <%= f.check_box :admin, :id=>'cb_admin', :style=>'visibility: hidden'%>      
+  </div>
+  <div id='pregunta'>
   </div>
 
   <div class="actions">
-    <%= f.submit "Edit",:class =>'btn btn-primary' %>
+    <%= f.submit :value=>"Admin",:class =>'btn btn-primary',:id=>'link_admin' %>
   </div>
 <% end %>
 </div>

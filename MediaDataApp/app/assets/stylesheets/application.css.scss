@@ -1,6 +1,7 @@
 /*
 *= require jquery.Jcrop
 */
+
 @import "bootstrap.min.css";
 .border-form-div {
 max-width: 300px;
@@ -17,6 +18,7 @@ box-shadow: 0 1px 2px rgba(0,0,0,.05);
 }
 .border-form-div .form-signin-heading,
 .border-form-div .checkbox {
+width:50%;
 margin-bottom: 10px;
 }
 .botones{

@@ -7,16 +7,23 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'fonts', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'estilos', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'introjs', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
- 
-  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'intro', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body class="menu menu-open">
 
 
 <div class="container-narrow">
- 
+    <script >
+      if($(window).width()<= 800){
+          $('nav').hide();
+      }else{
+          $('nav').show();
+      }
+    </script>
     <%= render 'layouts/user_header' %>
   
    <section>
@@ -25,6 +32,12 @@
    <script type="text/javascript"
    src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
    <%= javascript_include_tag 'menu', 'data-turbolinks-track' => true %>
+   <script>
+                $('.tour').click(function(){
+                  introJs().start();
+                });
+                 
+    </script>
 </div>
 
 </body>

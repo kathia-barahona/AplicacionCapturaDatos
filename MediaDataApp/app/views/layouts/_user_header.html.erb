@@ -1,27 +1,32 @@
  <header>
   <% if user_signed_in? %>
-   <div class="menu_bar">
-  <a href="#" class="btn-menu">
-  <span class= "icon-menu"></span>
+
+   <div class="menu_bar" data-step="1"  data-intro="Welcome to MediaData,let's start the tour!, if you want to exit it then press the skip button.">
+  <a href="#" class="btn-menu" >
+  <span class= "icon-menu" ></span>
   <%= image_tag("logo-technicolor2.png",:class => "img_preview")%>
   Media Data</a>
   </div>
   <nav>
     <ul>
-     <li>
+     <li data-step="1" class="logo"  data-intro="Welcome to MediaData,let's start the tour!, if you want to exit it then press the skip button.">
+          <%= image_tag("logo-technicolor2.png",:class => "img_preview1")%>
+          
+     </li>
+     <li  data-step="2"  data-intro="By touching the home tab you can see your entries">
        <%= link_to root_path do %> 
-        <span class="icon-home"></span>
+        <span class="icon-home" ></span>
          Home
         <% end %>
      </li>
-     <li>
+     <li data-step="4"  data-intro="By touching the New Entry tab you can create a new entry">
      <%= link_to new_registro_path do %> 
         <span class="icon-newentry"></span>
          New Entry
         <% end %>
      </li>
       <% if current_user.admin==true %>
-        <li>
+        <li data-step="5"  data-intro="By touching the users tab you can see all the users on the app">
         <%= link_to users_index_path do %> 
         <span class="icon-users"></span>
          Users
@@ -29,23 +34,23 @@
       <% end %>
 
       <% if current_user.admin==true %>
-        <li>
+        <li data-step="6"  data-intro="By touching the export tab you can download all the entries in the app">
         <%= link_to registros_export_path(format: "csv") do %> 
-        <span class="icon-users"></span>
-         Exportar 
+        <span class="icon-cloud-download"></span>
+         Export
         <% end %>
       <% end %>
 
-      <li>
+      <li data-step="7"  data-intro="By touching the profile tab you can see your information">
         <%= link_to current_user do %> 
         <span class="icon-profile"></span>
          Profile
         <% end %>
      </li>
-     <li>
+     <li data-step="8" data-position="right" data-intro="By touching the edit tab you can edit your information">
         <%= link_to edit_user_registration_path do %> 
         <span class="icon-settings"></span>
-         Settings
+         Edit Profile
         <% end %>
      </li>
       <li>
