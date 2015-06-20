@@ -1,6 +1,8 @@
 
-<div class="border-form-div" onload="checkCookie(<%=@cur_user%>)">
-  
+<div class="border-form-div">
+  <%if current_user.registros.count == 0 %>
+   <a class= "tour" align="center">Tutorial</a>
+  <%end%>
 <h1 align="center">New Entry</h1>
 <%= form_for @registro do |f| %>
   <% if @registro.errors.any? %>

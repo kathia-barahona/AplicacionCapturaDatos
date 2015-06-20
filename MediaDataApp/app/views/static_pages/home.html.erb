@@ -1,7 +1,10 @@
 
   <% if user_signed_in? %>
        <%if current_user.registros.count == 0 %>
+             
+             
               <%= render :partial =>'registros/form', :locals => {:@registro => Registro.new} %>
+
         <%else%>
            <script type="text/javascript">
         window.location.href = "/registros"
