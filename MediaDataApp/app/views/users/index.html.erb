@@ -19,15 +19,9 @@
         <td><%= user.name %></td>
         <td><%= link_to 'Show', user %></td>
         <% if  user.admin == true %>
-<<<<<<< HEAD
           <td><%= link_to 'Remove Admin', edit_user_path(user),:class=>'link_admin' %></td>
         <%else %>
           <td><%= link_to 'Make Admin', edit_user_path(user), :class=>'link_admin'%></td>
-=======
-          <td><%= link_to 'Remove Admin', edit_user_path(user) %></td>
-        <%else %>
-          <td><%= link_to 'Make Admin', edit_user_path(user) %></td>
->>>>>>> master
         <% end %>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
