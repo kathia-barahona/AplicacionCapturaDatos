@@ -18,7 +18,9 @@
 
 <div class="container-narrow">
     <script >
-    $('nav').hide();
+      if($(window).width()<= 800){
+      $('nav').hide();
+      }
     </script>
     <%= render 'layouts/user_header' %>
   

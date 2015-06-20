@@ -3,27 +3,28 @@ var tour = 0;
 var contador = 1;
 
 function main(){
-$('.menu_bar').click(function(){
-    $('nav').show();
-     
-	if(contador == 1){
-        
-		$('nav').animate({
-			left: '0'
+	if($(window).width()<= 800){
+		$('.menu_bar').click(function(){
+		    $('nav').show();
+		     
+			if(contador == 1){
+		        
+				$('nav').animate({
+					left: '0'
+			});
+			contador = 0;
+			} 
+			else {
+				contador = 1;
+				$('nav').show();
+				$('nav').animate({
+				left: '-100%'
+				});
+				
+			}
+ 		
 	});
-	contador = 0;
-	} 
-	else {
-		contador = 1;
-		$('nav').show();
-		$('nav').animate({
-		left: '-100%'
-		});
-		
-	}
- 
-});
-
+ }
 }
 
 function changeadmin(){
