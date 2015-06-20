@@ -15,12 +15,12 @@
 
 <p>
   <strong>H inicio:</strong>
-  <%= @registro.h_inicio %>
+  <%= @registro.h_inicio.strftime("%I:%M%p") %>
 </p>
 
 <p>
   <strong>H final:</strong>
-  <%= @registro.h_final %>
+  <%= @registro.h_final.strftime("%I:%M%p") %>
 </p>
 
 <p>

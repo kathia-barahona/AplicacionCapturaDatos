@@ -4,10 +4,10 @@
      <div class="border-form-div">
        <label>Type: </label><%=registro.media %><br>
        <label>Channel: </label><%=registro.channel%><br>
-       <label>Initial Hour: </label><%=registro.h_inicio%><br>
-       <label>Final Hour: </label><%=registro.h_final%><br>
+       <label>Initial Hour: </label><%=registro.h_inicio.strftime("%I:%M%p")%><br>
+       <label>Final Hour: </label><%=registro.h_final.strftime("%I:%M%p")%><br>
        <label>Location: </label><%=registro.location%><br>
-       <%= link_to 'Edit', edit_registro_path(registro) %> |
+       <%= link_to 'Edit', edit_registro_path(registro) %> 
      </div>
 <% end %>
 </div>

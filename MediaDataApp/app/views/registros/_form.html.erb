@@ -1,7 +1,7 @@
 
 <div class="border-form-div">
   <%if current_user.registros.count == 0 %>
-   <a class= "tour" align="center">Tutorial</a>
+   <a class= "tour btn btn-success" align="center">Tutorial</a>
   <%end%>
 <h1 align="center">New Entry</h1>
 <%= form_for @registro do |f| %>
