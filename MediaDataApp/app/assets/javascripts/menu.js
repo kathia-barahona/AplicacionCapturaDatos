@@ -1,12 +1,13 @@
-$(document).ready(main);
+$(document).ready(main,changeadmin,cambiarpregunta);
 var tour = 0;
 var contador = 1;
 
 function main(){
 $('.menu_bar').click(function(){
-// $('nav').toggle();
-	 
+    $('nav').show();
+     
 	if(contador == 1){
+        
 		$('nav').animate({
 			left: '0'
 	});
@@ -14,22 +15,23 @@ $('.menu_bar').click(function(){
 	} 
 	else {
 		contador = 1;
+		$('nav').show();
 		$('nav').animate({
 		left: '-100%'
 		});
+		
 	}
  
 });
 
+}
 
-$(document).ready(changeadmin);
 function changeadmin(){
 	$('#link_admin').click(function(){
            $('#cb_admin').trigger('click');
 	});
 }
 
-$(document).ready(cambiarpregunta);
 function cambiarpregunta(){
 	if($('#cb_admin').is(':checked')){
 		$('#pregunta').text("This user will stop being admin. Are you sure?");

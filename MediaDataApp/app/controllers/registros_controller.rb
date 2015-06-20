@@ -23,6 +23,7 @@ class RegistrosController < ApplicationController
   # GET /registros/new
   def new
     @registro = Registro.new
+    @cur_user = current_user.id;
   end
 
   # GET /registros/1/edit

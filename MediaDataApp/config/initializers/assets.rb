@@ -7,6 +7,7 @@ Rails.application.config.assets.precompile += %w( estilos.css )
 Rails.application.config.assets.precompile += %w( menu.js )
 Rails.application.config.assets.precompile += %w( intro.js )
 Rails.application.config.assets.precompile += %w( introjs.css )
+Rails.application.config.assets.precompile += %w( tour.js )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

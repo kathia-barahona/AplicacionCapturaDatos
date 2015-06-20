@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 }
+
 body{
 	background: #FFFFFA;
 }
@@ -14,8 +15,9 @@ header nav{
 	margin:20px auto;
 	background: #024959;
 }
-.menu_bar{
-	display: none;
+.menu_bar {
+      display: none;
+      
 }
 header nav ul{
 	overflow: hidden;
@@ -40,13 +42,24 @@ header nav ul li a:hover{
 section{
 	padding: 20px;
 }
+@media screen and (min-width: 800px){
+   .img_preview1{
+     height: 59px;
+   }
+}
 @media screen and (max-width: 800px){
+   .img_preview1{
+     display: none;
+   }
    header nav {
    	width: 40%;
    	height: 100%;
    	margin: 0;
    	position: fixed;
       top:15%;
+   }
+   .border-form-div {
+      margin-top: 20%;
    }
    header nav ul li{
    	display: block;

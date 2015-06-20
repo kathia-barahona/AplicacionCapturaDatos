@@ -1027,6 +1027,7 @@
       }
       return this;
     }
+    
   };
 
   exports.introJs = introJs;

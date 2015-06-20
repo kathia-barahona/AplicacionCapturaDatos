@@ -1,5 +1,6 @@
 
-<div class="border-form-div">
+<div class="border-form-div" onload="checkCookie(<%=@cur_user%>)">
+  
 <h1 align="center">New Entry</h1>
 <%= form_for @registro do |f| %>
   <% if @registro.errors.any? %>
@@ -41,6 +42,8 @@
     <%= f.submit "Create",:class =>'btn btn-primary' %>
   </div>
 <% end %>
+<%= link_to 'Show', @registro %> |
+<%= link_to 'Back', registros_path %>
 </div>
  
 
